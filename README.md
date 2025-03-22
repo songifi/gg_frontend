@@ -85,3 +85,12 @@ We welcome contributions to Gasless Gossip! Please check out our [Contributing G
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+
+
+# ShadCN UI Integration
+
+### Installation
+1. Install ShadCN CLI and dependencies:
+   ```bash
+   npx shadcn@latest init
