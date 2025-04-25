@@ -21,7 +21,7 @@ export default function Home() {
   } = useLeaderboard();
 
   return (
-    <div className="bg-red-500 grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-red-500 w- grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-3xl font-bold text-white">Welcome to Gasless Gossip</h1>
       
       {(songsLoading || categoriesLoading || leaderboardLoading) ? (
