@@ -100,7 +100,7 @@ export const KeyFeatures = () => {
             </p>
             <Image
               src="/Apple_Wallet_Icon 1.png"
-              alt="Eclipse"
+              alt="Apple Wallet"
               width={400}
               height={400}
               className="h-auto w-full mt-auto object-contain"
