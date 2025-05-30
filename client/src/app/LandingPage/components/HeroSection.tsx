@@ -12,8 +12,8 @@ import {
 export const HeroSection = () => {
   return (
     <>
-      <NavBar />
-      <section className="relative">
+      <section className="relative bg-[linear-gradient(180deg,_#F4FFF7_46.8%,_#FFF_71.33%)]">
+        <NavBar />
         <div className="container mx-auto mt-20 flex flex-col items-center gap-6 px-4">
           <div className="flex items-center gap-2 rounded-full border-2 border-[#0B501E] px-3.5 py-2">
             <Image
@@ -25,7 +25,6 @@ export const HeroSection = () => {
             <p className="text-sm text-[#0B501E]">Powered by Starknet</p>
           </div>
 
-       
           <div className="flex flex-col items-center text-center">
             <h1 className="text-[#0B501E]">
               <span className="text-3xl font-bold sm:text-4xl md:text-6xl lg:text-[5.5rem]">
@@ -67,8 +66,6 @@ export const HeroSection = () => {
               priority
             />
           </div>
-
-      
 
           {/* Top Left Card - Wallet */}
           <div className="absolute top-[-20] left-0 z-20 hidden md:block lg:left-20 xl:left-50">
@@ -148,7 +145,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Bottom Left Card - Frequent Gossips */}
-          <div className="absolute bottom-8 left-0 z-20 hidden md:block lg:left-30 xl:left-55">
+          <div className="absolute bottom-25 left-0 z-20 hidden md:block lg:left-30 xl:left-55">
             <div className="rounded-xl border border-[rgba(112,221,141,0.57)] bg-white/10 p-5 shadow-lg backdrop-blur-sm">
               <h3 className="mb-4 text-sm font-medium text-gray-700">
                 Frequent Gossips
@@ -229,7 +226,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Bottom Right Card */}
-          <div className="absolute right-0 bottom-4 z-20 hidden w-80 md:block lg:right-10 xl:right-35">
+          <div className="absolute right-0 bottom-20 z-20 hidden w-80 md:block lg:right-10 xl:right-35">
             <div className="rounded-lg border border-[rgba(112,221,141,0.57)] bg-white/10 p-5 shadow-lg backdrop-blur-sm">
               <h3 className="text-center text-2xl font-extrabold">
                 Chat Securely, Send Instantly
@@ -240,6 +237,7 @@ export const HeroSection = () => {
               </p>
             </div>
           </div>
+          <article className="absolute bottom-0 left-1/2 z-10 h-[12rem] w-full max-w-7xl -translate-x-1/2 bg-[linear-gradient(174deg,_rgba(255,255,255,0)_-114.14%,_#ffffff_-87.95%)] blur-[40px]"></article>
         </div>
       </section>
     </>
