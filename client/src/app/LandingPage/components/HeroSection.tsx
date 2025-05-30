@@ -107,7 +107,6 @@ export const HeroSection = () => {
           {/* Left Middle Card */}
           <div className="absolute top-1/2 left-12 z-20 hidden -translate-y-1/2 transform md:block">
             <div className="flex w-[200px] flex-col items-center rounded-md border border-[rgba(112,221,141,0.57)] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.08)_100%)] px-4 py-3 shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[10px]">
-           
               <div className="mb-2 flex items-center gap-2">
                 <Image
                   src="/starkNetIcon.png"
@@ -120,17 +119,14 @@ export const HeroSection = () => {
                 </span>
               </div>
 
-              
               <p className="text-center text-[2rem] font-bold text-[#0B501E]">
                 $500
               </p>
 
-             
               <p className="text-center text-sm text-gray-600">
                 50,678.89 STRK
               </p>
 
-             
               <p className="mt-3 w-full text-right text-[0.625rem] text-gray-500">
                 Read 16:40
               </p>
@@ -138,13 +134,68 @@ export const HeroSection = () => {
           </div>
 
           {/* Bottom Left Card */}
-          <div className="absolute bottom-[-20px] left-[-40px] z-20 hidden md:block">
-            <Image
-              src="/uiCard2.png"
-              alt="Frequent Gossip"
-              width={220}
-              height={120}
-            />
+          <div className="absolute bottom-[0px] left-12 z-20 hidden md:block">
+            <div className="rounded-[1.25rem] border border-[rgba(112,221,141,0.57)] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.08)_100%)] p-5 shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[10px]">
+              <h1 className="text-[0.875rem] font-medium text-gray-600">
+                Frequent Gossips
+              </h1>
+              <div className="mt-4 flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
+                  <Image
+                    src="/alexis.png"
+                    alt="Alexis"
+                    width={80}
+                    height={80}
+                    className="rounded-full w-12 h-12 shrink-0 aspect-square "
+                    priority
+                  />
+                  <p className='text-xs font-medium'>Alexis</p>
+                </div>
+
+                <div className="flex flex-col items-center gap-2">
+                  <Image
+                    src="/ralph.png"
+                    alt="ralph"
+                    width={80}
+                    height={80}
+                    className="rounded-full w-12 h-12 shrink-0 aspect-square "
+                    priority
+                  />
+                  <p className='text-xs font-medium'>Ralph</p>
+                </div>
+
+                <div className="flex flex-col items-center gap-2">
+                  <Image
+                    src="/victor.png"
+                    alt="Victor"
+                    width={80}
+                    height={80}
+                    className="rounded-full w-12 h-12 shrink-0 aspect-square "
+                    priority
+                  />
+                  <p className='text-xs font-medium'>Victor</p>
+                </div>
+
+                <div className="flex flex-col items-center gap-2">
+                  <Image
+                    src="/anna.png"
+                    alt="anna"
+                    width={80}
+                    height={80}
+                    className="rounded-full w-12 h-12 shrink-0 aspect-square "
+                    priority
+                  />
+                  <p className='text-xs font-medium'>Anna</p>
+                </div>
+
+                <div className="flex flex-col items-center gap-2">
+                  <div className='flex justify-center w-[3rem] h-3rem p-3 bg-[#FD8240] rounded-[6.75rem]'>
+                    <p className='text-white text-[0.875rem] font-medium '>J</p>
+                  </div>
+                  <p className='text-xs font-medium'>Jakub</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Top Right Card */}
