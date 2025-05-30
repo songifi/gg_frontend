@@ -1,42 +1,58 @@
-"use client";
-import React from "react";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+import React from 'react'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <header>
-      <nav className="container mx-auto px-4 flex items-center justify-between py-6">
-        <div className="flex gap-2 items-center ">
+      <nav className="container mx-auto flex items-center justify-between px-4 py-6">
+        <div className="flex items-center gap-2">
           <Image
             src="/Logo.png"
             alt="Logo"
             width={20}
             height={20}
-            className="w-5 h-5"
+            className="h-5 w-5"
           />
-          <p className="text-[#0B501E] font-bold">Gasless Gossip</p>
+          <p className="font-bold text-[#0B501E]">Gasless Gossip</p>
         </div>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? <Menu /> : <X />}
         </button>
 
         {/* Desktop Link */}
-        <ul className="hidden items-center gap-8 md:flex text-black text-base ">
-          <Link href="#">
-            Features
-          </Link>
+        <ul className="hidden items-center gap-8 text-base text-black md:flex">
+          <Link href="#">Features</Link>
           <Link href="#">How it works</Link>
           <Link href="#">About</Link>
         </ul>
 
         {/* button */}
-        <button className="hidden md:block bg-[#419057] text-white rounded-[1.25rem] text-center text-base font-semibold py-4 px-8">Connet</button>
+        <button className="hidden rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
+          Connect
+        </button>
       </nav>
+      {/* Mobile Dropdown */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+      >
+        <ul className="flex flex-col items-center gap-4 p-4 pb-4">
+          <Link href="#" className="text-base text-black">
+            Features
+          </Link>
+          <Link href="#" className="text-base text-black">
+            How it works
+          </Link>
+          <Link href="#" className="text-base text-black">
+            About
+          </Link>
+        </ul>
+      </div>
     </header>
-  );
-};
+  )
+}
