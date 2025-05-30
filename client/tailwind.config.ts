@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+
   theme: {
     extend: {
       fontFamily: {
@@ -15,7 +20,11 @@ module.exports = {
       },
     },
     colors: {
-      green: '#419057',
+      newgreen: {
+        DEFAULT: '#419057',
+        light: 'rgba(65, 144, 87, 0.7)',
+        dark: '#377a49',
+      },
     },
   },
   plugins: [],
