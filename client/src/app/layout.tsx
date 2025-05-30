@@ -2,15 +2,21 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
+import { Instrument_Serif } from 'next/font/google';
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-instrument-serif',
+  display: 'swap',
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${inter.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${inter.variable} ${instrumentSerif.variable}`}>
       <body
         className="font-sans antialiased"
       >
