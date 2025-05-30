@@ -30,7 +30,7 @@ export const HowItWorks = () => {
               <p className="text-2xl font-bold text-[#419057]">
                 Connect Your Wallet
               </p>
-              <p className="text-justify text-[1.10294rem] text-[#419057]">
+              <p className="text-justify text-base sm:text-[1.10294rem] text-[#419057]">
                 Start by connecting your crypto wallet (like Argent, Braavos, or
                 MetaMask via Starknet). No need to preload it with ETH — you
                 won’t be paying gas. Gasless Gossip uses account abstraction to
@@ -57,7 +57,7 @@ export const HowItWorks = () => {
               <p className="text-2xl font-bold text-[#419057]">
                 Start Chatting Instantly
               </p>
-              <p className="text-justify text-[1.10294rem] text-[#419057]">
+              <p className="text-justify text-base sm:text-[1.10294rem] text-[#419057]">
                 Once you're in, it feels just like any modern messaging app —
                 but it's fully on-chain. Send direct messages, chat in groups,
                 or reply to friends in real-time. Every message is recorded on
@@ -84,7 +84,7 @@ export const HowItWorks = () => {
               <p className="text-2xl font-bold text-[#419057]">
                 Tip Friends & Gossip Freely
               </p>
-              <p className="text-justify text-[1.10294rem] text-[#419057]">
+              <p className="text-justify text-base sm:text-[1.10294rem] text-[#419057]">
                 Send tokens to friends straight from the chat. No pop-ups, no
                 signing prompts, no gas. Just tap to tip — whether it’s $ETH,
                 $USDC, or custom tokens — and keep the gossip flowing. It's
