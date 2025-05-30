@@ -6,10 +6,17 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
         geist: ['var(--font-geist-sans)', 'sans-serif'],
-        instrument: ['var(--font-instrument-serif)', 'serif', 'Georgia', 'Times New Roman'],
-
+        instrument: [
+          'var(--font-instrument-serif)',
+          'serif',
+          'Georgia',
+          'Times New Roman',
+        ],
       },
+    },
+    colors: {
+      green: '#419057',
     },
   },
   plugins: [],
-};
+}
