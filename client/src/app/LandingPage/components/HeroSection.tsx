@@ -105,8 +105,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Left Middle Card */}
-          <div className="absolute top-1/2 left-12 z-20 hidden -translate-y-1/2 transform md:block">
-            <div className="flex w-[200px] flex-col items-center rounded-md border border-[rgba(112,221,141,0.57)] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.08)_100%)] px-4 py-3 shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[10px]">
+          <div className="absolute top-1/2 left-5 z-0 hidden -translate-y-1/2 transform md:block">
+            <div className="flex w-[200px] flex-col  rounded-md border border-[rgba(112,221,141,0.57)] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.08)_100%)] px-4 py-3 shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[10px]">
               <div className="mb-2 flex items-center gap-2">
                 <Image
                   src="/starkNetIcon.png"
@@ -119,11 +119,11 @@ export const HeroSection = () => {
                 </span>
               </div>
 
-              <p className="text-center text-[2rem] font-bold text-[#0B501E]">
+              <p className="ml-4 text-[2rem] font-bold text-[#0B501E]">
                 $500
               </p>
 
-              <p className="text-center text-sm text-gray-600">
+              <p className="ml-6 text-sm text-gray-600">
                 50,678.89 STRK
               </p>
 
@@ -134,7 +134,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Bottom Left Card */}
-          <div className="absolute bottom-[0px] left-12 z-20 hidden md:block">
+          <div className="absolute top-2/3 left-0 z-20 hidden md:block">
             <div className="rounded-[1.25rem] border border-[rgba(112,221,141,0.57)] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.08)_100%)] p-5 shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[10px]">
               <h1 className="text-[0.875rem] font-medium text-gray-600">
                 Frequent Gossips
