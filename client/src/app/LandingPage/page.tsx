@@ -19,10 +19,8 @@ export default function LandingPage() {
        <AboutUs />
        <Experience />
        <EarlyAccess />
-  
       </main>
       <Footer />
-     
     </div>
   );
 }

@@ -24,7 +24,7 @@ export const EarlyAccess = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative container mx-auto max-w-3xl rounded-[20px] bg-[#eaf9ec] px-4 px-10 py-20 text-center shadow-lg"
+            className="relative container mx-auto max-w-3xl rounded-[20px] bg-[#eaf9ec] px-10 py-20 text-center shadow-lg"
           >
             <div className="pointer-events-none absolute inset-0 bg-[url('/opacImage.png')] bg-contain" />
             <div className="relative z-10">

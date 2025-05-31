@@ -10,7 +10,7 @@ export const NavBar = () => {
 
   return (
     <header>
-      <nav className="container mx-auto flex items-center justify-between px-10  py-6">
+      <nav className="container mx-auto flex items-center justify-between px-10 py-6">
         <div className="flex items-center gap-2">
           <Image
             src="/Logo.png"
@@ -21,7 +21,10 @@ export const NavBar = () => {
           />
           <p className="font-bold text-[#0B501E]">Gasless Gossip</p>
         </div>
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="cursor-pointer rounded-lg border border-[#419057] p-1 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {!isOpen ? <Menu /> : <X />}
         </button>
 
@@ -33,15 +36,15 @@ export const NavBar = () => {
         </ul>
 
         {/* button */}
-        <button className="hidden cursor-pointer rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
+        <button className="cursor hidden rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
           Connect
         </button>
       </nav>
       {/* Mobile Dropdown */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`transition-all duration-300 ease-in-out md:hidden ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <ul className="flex flex-col items-center gap-4 p-4 pb-4">
+        <ul className="flex flex-col items-center gap-4 border p-4 pb-4">
           <Link href="#key-features" className="text-base text-black">
             Features
           </Link>
@@ -51,6 +54,9 @@ export const NavBar = () => {
           <Link href="#about" className="text-base text-black">
             About
           </Link>
+          <button className="cursor-pointer rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
+            Connect
+          </button>
         </ul>
       </div>
     </header>

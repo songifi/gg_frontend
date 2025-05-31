@@ -4,7 +4,7 @@ export const AboutUs = () => {
   return (
     <section className="mt-10" id='about'>
       <div className="container mx-auto px-10 ">
-        {/* About Section */}
+        
         <article className="flex flex-col items-start gap-4 md:flex-row">
           <h3 className="mx-auto w-fit rounded-[1.25rem] bg-[#E4F9E9] px-4 py-3 text-base font-bold text-[#419057] md:mx-0 md:w-[35%]">
             About Us & Powered by Starknet
@@ -17,7 +17,7 @@ export const AboutUs = () => {
           </p>
         </article>
 
-        {/* Grid Section */}
+      
         <article className="mt-10 grid grid-cols-1 items-start gap-6 md:grid-cols-2">
       
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

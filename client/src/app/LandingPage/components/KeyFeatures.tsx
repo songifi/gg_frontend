@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Send, MailIcon } from 'lucide-react'
+import { Send } from 'lucide-react'
 
 export const KeyFeatures = () => {
   return (

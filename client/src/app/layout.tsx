@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 
 import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import QueryProvider from "@/components/ui/query-provider";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -18,13 +19,17 @@ const instrumentSerif = Instrument_Serif({
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
-      <body>
-        {children}
+    <html lang="en">
+      <body
+        className={`${inter.variable} ${instrumentSerif.variable} antialiased`}
+      >
+        <QueryProvider>
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );
