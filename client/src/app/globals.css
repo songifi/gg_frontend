@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -115,8 +115,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -126,35 +124,31 @@
   }
 
   .swiper-pagination-bullet {
-  background: #cbc9db !important;
-  opacity: 0.5 !important;
-  width: 10px !important;
-  height: 10px !important;
+    background: #cbc9db !important;
+    opacity: 0.5 !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #419057 !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet:hover {
+    opacity: 0.8 !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    @apply text-green-700;
+    font-size: 1.5rem;
+  }
+
+ 
+
+  .swiper-button-next:hover::after,
+  .swiper-button-prev:hover::after {
+    @apply text-green-900;
+  }
 }
-
-.swiper-pagination-bullet-active {
-  background: #419057 !important;
-  opacity: 1 !important;
-}
-
-
-.swiper-pagination-bullet:hover {
-  opacity: 0.8 !important;
-}
-
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  @apply text-green-700;
-  font-size: 1.5rem;
-}
-
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
-  @apply text-green-900;
-}
-  
-}
-
-
-

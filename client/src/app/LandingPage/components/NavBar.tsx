@@ -9,7 +9,7 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header>
+    <header className="sticky top-0 z-[1000] backdrop-blur-lg shadow-sm">
       <nav className="container mx-auto flex items-center justify-between px-10  py-6">
         <div className="flex items-center gap-2">
           <Image
@@ -27,9 +27,9 @@ export const NavBar = () => {
 
         {/* Desktop Link */}
         <ul className="hidden items-center gap-8 text-base text-black md:flex">
-          <Link href="#">Features</Link>
-          <Link href="#">How it works</Link>
-          <Link href="#">About</Link>
+          <Link href="#key-features">Features</Link>
+          <Link href="#how-it-works">How it works</Link>
+          <Link href="#about">About</Link>
         </ul>
 
         {/* button */}
@@ -42,13 +42,13 @@ export const NavBar = () => {
         className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <ul className="flex flex-col items-center gap-4 p-4 pb-4">
-          <Link href="#" className="text-base text-black">
+          <Link href="#key-features" className="text-base text-black">
             Features
           </Link>
-          <Link href="#" className="text-base text-black">
+          <Link href="#how-it-works" className="text-base text-black">
             How it works
           </Link>
-          <Link href="#" className="text-base text-black">
+          <Link href="#about" className="text-base text-black">
             About
           </Link>
         </ul>

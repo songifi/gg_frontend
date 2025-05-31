@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const AboutUs = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-10" id='about'>
       <div className="container mx-auto px-10 ">
         {/* About Section */}
         <article className="flex flex-col items-start gap-4 md:flex-row">

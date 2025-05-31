@@ -17,7 +17,10 @@ module.exports = {
           'Georgia',
           'Times New Roman',
         ],
+        
       },
+      
+      
     },
     colors: {
       newgreen: {
@@ -28,4 +31,7 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+    scrollBehavior: true,
+  },
 }

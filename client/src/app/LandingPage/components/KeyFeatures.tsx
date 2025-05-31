@@ -3,7 +3,7 @@ import { Send, MailIcon } from 'lucide-react'
 
 export const KeyFeatures = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-20" id="key-features">
       <div className="container mx-auto px-10 ">
         <h1 className="mb-10 text-center text-3xl font-bold sm:text-4xl md:text-6xl">
           Key Features

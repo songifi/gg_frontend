@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export const HowItWorks = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-8" id='how-it-works'>
       <div className="container mx-auto h-auto min-h-[600px] w-full bg-[url('/howitworksMain.png')] bg-cover bg-center bg-no-repeat px-10 py-16">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <div className="flex items-center justify-center">

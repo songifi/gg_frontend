@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="">
+    <div className="scroll-smooth">
       <main>
        <HeroSection />
        <KeyFeatures />
