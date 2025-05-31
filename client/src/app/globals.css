@@ -123,12 +123,15 @@
     @apply bg-background text-foreground;
   }
 
+
   .swiper-pagination-bullet {
     background: #cbc9db !important;
     opacity: 0.5 !important;
     width: 10px !important;
     height: 10px !important;
   }
+
+  
 
   .swiper-pagination-bullet-active {
     background: #419057 !important;
@@ -151,4 +154,6 @@
   .swiper-button-prev:hover::after {
     @apply text-green-900;
   }
+
+  
 }

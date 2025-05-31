@@ -33,7 +33,7 @@ export const NavBar = () => {
         </ul>
 
         {/* button */}
-        <button className="hidden rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
+        <button className="hidden cursor-pointer rounded-[1.25rem] bg-[#419057] px-8 py-4 text-center text-base font-semibold text-white hover:bg-black hover:text-white md:block">
           Connect
         </button>
       </nav>
