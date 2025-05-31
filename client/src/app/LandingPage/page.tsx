@@ -7,6 +7,7 @@ import { Experience } from './components/Experience';
 import { EarlyAccess } from './components/EarlyAccess';
 import { Footer } from './components/Footer';
 import { ReadyToJoin } from './components/ReadyToJoin';
+import { Connect } from './components/Connect';
 
 
 export default function LandingPage() {
@@ -20,6 +21,7 @@ export default function LandingPage() {
        <Experience />
        <EarlyAccess />
        <ReadyToJoin />
+       <Connect />
       </main>
       <Footer />
      
