@@ -144,7 +144,7 @@ export const EarlyAccess = () => {
               onClick={() => setView('main')}
               className="mb-4 flex items-center text-sm cursor-pointer text-[#419057] transition hover:text-green-700"
             >
-              <ArrowLeft className="mr-1 h-4 w-4" /> Back
+              <ArrowLeft className="mr-1 h-4 w-4" />Back
             </button>
             <h1 className="text-center text-3xl font-bold text-[#0B501E] md:text-5xl">
               Ready to Join?
