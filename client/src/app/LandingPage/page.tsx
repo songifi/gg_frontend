@@ -6,6 +6,7 @@ import { AboutUs } from './components/About';
 import { Experience } from './components/Experience';
 import { EarlyAccess } from './components/EarlyAccess';
 import { Footer } from './components/Footer';
+import { ReadyToJoin } from './components/ReadyToJoin';
 
 
 export default function LandingPage() {
@@ -18,6 +19,7 @@ export default function LandingPage() {
        <AboutUs />
        <Experience />
        <EarlyAccess />
+       <ReadyToJoin />
       </main>
       <Footer />
      

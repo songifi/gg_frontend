@@ -11,11 +11,10 @@ import {
 
 export const HeroSection = () => {
   return (
-    <section className='bg-[linear-gradient(180deg,#F4FFF7_46.8%,#FFF_71.33%)]'>
-    <NavBar />
-      <section className="relative">
-        
-        <div className="container mx-auto mt-20 flex flex-col items-center gap-6 px-10 ">
+    <>
+      <section className="relative bg-[linear-gradient(180deg,_#F4FFF7_46.8%,_#FFF_71.33%)]">
+        <NavBar />
+        <div className="container mx-auto mt-20 flex flex-col items-center gap-6 px-10">
           <div className="flex items-center gap-2 rounded-full border-2 border-[#0B501E] px-3.5 py-2">
             <Image
               src="/starknetIcon.png"
@@ -241,6 +240,6 @@ export const HeroSection = () => {
           <article className="absolute bottom-0 left-1/2 z-10 h-[12rem] w-full max-w-7xl -translate-x-1/2 bg-[linear-gradient(174deg,_rgba(255,255,255,0)_-114.14%,_#ffffff_-87.95%)] blur-[40px]"></article>
         </div>
       </section>
-    </section>
+    </>
   )
 }

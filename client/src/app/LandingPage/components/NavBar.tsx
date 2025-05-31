@@ -9,7 +9,7 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-[1000] backdrop-blur-lg shadow-sm">
+    <header>
       <nav className="container mx-auto flex items-center justify-between px-10  py-6">
         <div className="flex items-center gap-2">
           <Image
