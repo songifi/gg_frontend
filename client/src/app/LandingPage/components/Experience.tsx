@@ -25,7 +25,7 @@ const fadeUp = {
 export const Experience = () => (
   <section className="mt-40">
     <div
-      className="container mx-auto px-15 py-5"
+      className="container mx-auto px-10  py-5"
       style={{
         background:
           'radial-gradient(50% 50% at 50% 50%, rgba(244, 249, 254, 0.7) 0%, rgba(255, 251, 240, 0.7) 100%)',

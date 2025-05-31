@@ -3,7 +3,7 @@ import { Mail, Wallet } from 'lucide-react'
 export const EarlyAccess = () => {
   return (
     <section className="mt-30">
-      <div className="container mx-auto px-4 relative overflow-hidden rounded-[20px] bg-[#eaf9ec] px-4 py-20 text-center">
+      <div className="container mx-auto px-10  relative overflow-hidden rounded-[20px] bg-[#eaf9ec] px-4 py-20 text-center">
         <div className="pointer-events-none absolute inset-0 bg-[url('/opacImage.png')] bg-contain" />
 
         <div className="relative z-10 mx-auto max-w-3xl">

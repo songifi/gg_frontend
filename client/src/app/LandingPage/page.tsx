@@ -5,6 +5,7 @@ import { HowItWorks } from './components/HowItWorks';
 import { AboutUs } from './components/About';
 import { Experience } from './components/Experience';
 import { EarlyAccess } from './components/EarlyAccess';
+import { Footer } from './components/Footer';
 
 
 export default function LandingPage() {
@@ -17,8 +18,8 @@ export default function LandingPage() {
        <AboutUs />
        <Experience />
        <EarlyAccess />
-       
       </main>
+      <Footer />
      
     </div>
   );
