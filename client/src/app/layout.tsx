@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Gasless Gossip Landing Page</title>
+      </head>
       <body
         className={`${inter.variable} ${instrumentSerif.variable} antialiased`}
       >
