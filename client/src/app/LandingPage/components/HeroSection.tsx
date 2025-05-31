@@ -14,7 +14,7 @@ export const HeroSection = () => {
     <>
       <section className="relative bg-[linear-gradient(180deg,_#F4FFF7_46.8%,_#FFF_71.33%)]">
         <NavBar />
-        <div className=" container mx-auto mt-20 flex flex-col items-center gap-6 px-10 ">
+        <div className=" container mx-auto mt-10 flex flex-col items-center gap-6 px-10 ">
           <div className="flex items-center gap-2 rounded-full border-2 border-[#0B501E] px-3.5 py-2">
             <Image
               src="/starknetIcon.png"
@@ -26,8 +26,8 @@ export const HeroSection = () => {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <h1 className="text-newgreen">
-              <span className="text-3xl font-bold sm:text-4xl md:text-6xl lg:text-[5.5rem]">
+            <h1 className="text-[#0B501E]">
+              <span className="text-3xl font-bold  sm:text-4xl md:text-6xl lg:text-[5.5rem]">
                 Chat.{' '}
               </span>
               <span className="text-3xl italic sm:text-4xl md:text-6xl lg:text-[5.5rem] font-instrument">
@@ -45,7 +45,7 @@ export const HeroSection = () => {
               A social messaging app built on Starknet real-time chat and token
               tipping all gasless.
             </p>
-            <button className="mt-8 rounded-xl bg-[#419057] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-black md:mt-10 md:px-8 md:py-4">
+            <button className="mt-8 cursor-pointer rounded-xl bg-[#419057] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-black md:mt-10 md:px-8 md:py-4">
               Join the Group
             </button>
           </div>
