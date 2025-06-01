@@ -1,77 +1,64 @@
-import Link from "next/link"
-import { Twitter, Linkedin, Instagram, MessageSquare } from "lucide-react"
-import Image from "next/image"
+'use client'
 
-export default function Footer() {
+import Image from 'next/image'
+import { FaXTwitter, FaDiscord, FaTelegram, FaGithub } from 'react-icons/fa6'
+
+export const Footer = () => {
   return (
-    <footer style={{
-      background: 'linear-gradient(to right, #cbc9db, #998bc0)',
-      fontFamily: 'Haettenschweiler, sans-serif'
-    }}  className="w-full py-8 px-4 md:px-8">
-      <div className=" mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center md:items-start gap-2">
-        {/* Logo Section */}
-        <div className="flex flex-col items-center md:items-start">
-          <div className="w-24 h-24 relative mb-2">
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-20 h-20 relative">
-                <Image src="/noNameLogo.png" alt="Gasless Gossip Logo" width={300} height={300} className="object-cover w-full h-full" />
-              </div>
-            </div>
+    <footer className="mt-15 w-full bg-gradient-to-b from-[#FEFEFE] to-[#CDF3D8] text-black py-12 px-10 md:px-16">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-start gap-10">
+
+  
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <Image src="/Logo.png" alt="Gasless Gossip Logo" width={112} height={112} className="mb-4" />
+          <h1 className="text-xl font-semibold bg-gradient-to-r from-[#0B501E] to-[#70DD8D] bg-clip-text text-transparent">
+            Gasless <span>Gossip</span>
+          </h1>
+          <p className="text-sm mt-1 text-[#0E5723]">Chat. Gossip. Tip. No Gas Required</p>
+
+    
+          <div className="flex gap-4 mt-4">
+            <a href="#" aria-label="X (Twitter)" className="hover:text-green-500">
+              <FaXTwitter className="text-2xl" />
+            </a>
+            <a href="#" aria-label="Discord" className="hover:text-green-500">
+              <FaDiscord className="text-2xl" />
+            </a>
+            <a href="#" aria-label="Telegram" className="hover:text-green-500">
+              <FaTelegram className="text-2xl" />
+            </a>
+            <a href="#" aria-label="GitHub" className="hover:text-green-500">
+              <FaGithub className="text-2xl" />
+            </a>
           </div>
-          <h2 className="text-green-800 text-xl font-bold">Gasless Gossip</h2>
         </div>
 
-        {/* Quick Links Section */}
-        <div className="text-center md:text-left">
-          <h3 className="text-indigo-900 font-bold text-lg mb-4">QUICK LINKS</h3>
-          <nav className="flex flex-col items-center justify-center space-y-2">
-            <Link href="/" className="text-indigo-900 hover:text-indigo-700 transition-colors">
-              Homepage
-            </Link>
-            <Link href="/chats" className="text-indigo-900 hover:text-indigo-700 transition-colors">
-              Chats
-            </Link>
-            <Link href="/nfts" className="text-indigo-900 hover:text-indigo-700 transition-colors">
-              NFTs
-            </Link>
-            <Link href="/wallet" className="text-indigo-900 hover:text-indigo-700 transition-colors">
-              Wallet
-            </Link>
-            <Link href="/notifications" className="text-indigo-900 hover:text-indigo-700 transition-colors">
-              Notifications
-            </Link>
-          </nav>
+      
+        <div className="flex flex-col gap-2">
+          <h2 className="font-bold mb-2">Features</h2>
+          <p>Gasless Messaging</p>
+          <p>Token Tipping</p>
+          <p>Real Time Communication</p>
         </div>
 
-        {/* Social Media Section */}
-        <div className="text-center md:text-left my-5 md:my-0">
-          <h3 className="text-indigo-900 font-bold text-lg mb-4">SOCIAL MEDIA</h3>
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <Link
-              href="https://twitter.com"
-              className="text-indigo-900 hover:text-indigo-700 transition-colors flex items-center justify-center md:justify-start"
-            >
-              <Twitter className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://linkedin.com"
-              className="text-indigo-900 hover:text-indigo-700 transition-colors flex items-center justify-center md:justify-start"
-            >
-              <Linkedin className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://instagram.com"
-              className="text-indigo-900 hover:text-indigo-700 transition-colors flex items-center justify-center md:justify-start"
-            >
-              <Instagram className="w-6 h-6" />
-            </Link>
-            <Link
-              href="https://discord.com"
-              className="text-indigo-900 hover:text-indigo-700 transition-colors flex items-center justify-center md:justify-start"
-            >
-              <MessageSquare className="w-6 h-6" />
-            </Link>
-          </div>
+       
+        <div className="flex flex-col gap-2">
+          <h2 className="font-bold mb-2">How it works</h2>
+          <p>Connect Wallet</p>
+          <p>Start Chatting Instantly</p>
+          <p>Tip Friends and Gossip Freely</p>
+        </div>
+      </div>
+
+  
+      <div className="my-10 border-t border-green-200"></div>
+
+
+      <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 gap-4">
+        <p>© 2025 Gasless Gossip. All rights reserved.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-green-500">Trademark Policy</a>
+          <a href="#" className="hover:text-green-500">Privacy Policy</a>
         </div>
       </div>
     </footer>

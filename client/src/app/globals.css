@@ -1,7 +1,7 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-/* @tailwind base; */
-/* @tailwind components; */
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
@@ -122,4 +122,38 @@
   body {
     @apply bg-background text-foreground;
   }
+
+
+  .swiper-pagination-bullet {
+    background: #cbc9db !important;
+    opacity: 0.5 !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  
+
+  .swiper-pagination-bullet-active {
+    background: #419057 !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet:hover {
+    opacity: 0.8 !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    @apply text-green-700;
+    font-size: 1.5rem;
+  }
+
+ 
+
+  .swiper-button-next:hover::after,
+  .swiper-button-prev:hover::after {
+    @apply text-green-900;
+  }
+
+  
 }
