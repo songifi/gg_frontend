@@ -56,7 +56,6 @@ import { useChatStore } from '@/components/chatStore'
 export default function ChatPage() {
   const selectedChatId = useChatStore((s) => s.selectedChatId)
   const setSelectedChatId = useChatStore((s) => s.setSelectedChatId)
-  // Local state to control mobile view (chat list vs chat area)
   const [showChatAreaMobile, setShowChatAreaMobile] = useState(false)
 
   return (

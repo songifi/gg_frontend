@@ -70,7 +70,7 @@ export default function SendSTRKModal({ onClose }: SendSTRKModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 backdrop-blur-sm">
-      <div className="relative ml-200 flex h-[760px] w-[580px] flex-col rounded-2xl bg-white p-8 shadow-xl">
+      <div className="relative flex h-full w-full flex-col rounded-none bg-white p-4 shadow-xl md:ml-200 md:h-[760px] md:w-[580px] md:rounded-2xl md:p-8">
         <ModalHeader onClose={onClose} />
         <ModalTabs tab={tab} setTab={setTab} />
         <RecipientInfo />
