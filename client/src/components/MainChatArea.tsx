@@ -6,7 +6,6 @@ import MessageInput from './MessageInput'
 import { useEffect } from 'react'
 import { useChatStore } from './chatStore'
 
-// The original chatData, now used to populate Zustand store on first mount
 const chatData = [
   {
     id: '1',
@@ -82,7 +81,7 @@ const chatData = [
   },
 ]
 
-export default function MainChatArea() {
+export default function MainChatArea({ onBack }: { onBack?: () => void }) {
   const chats = useChatStore((s) => s.chats)
   const selectedChatId = useChatStore((s) => s.selectedChatId)
   const setChats = useChatStore.setState
@@ -99,8 +98,41 @@ export default function MainChatArea() {
     <section className="relative flex h-full w-full flex-col bg-[#FAFBFA]">
       {selectedChat ? (
         <>
-          <div className="sticky top-0 z-20 border-b border-gray-200 bg-white px-4 pt-4 pb-2 md:px-8 md:pt-6">
+          <div className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-gray-100 px-4 pt-4 pb-2 md:justify-start md:bg-white md:px-8 md:pt-6">
+            <button
+              className="mr-2 flex items-center justify-center md:hidden"
+              onClick={onBack}
+              aria-label="Back"
+            >
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#222"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
             <ChatHeader name={selectedChat.name} avatar={selectedChat.avatar} />
+            <button
+              className="ml-auto flex items-center justify-center md:hidden"
+              aria-label="Menu"
+            >
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                stroke="#222"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </button>
           </div>
 
           <div

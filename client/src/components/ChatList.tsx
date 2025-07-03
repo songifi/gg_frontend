@@ -1,4 +1,5 @@
 import ChatListItem, { ChatListItemProps } from './ChatListItem'
+import MobileBottomNav from './MobileBottomNav'
 
 interface ChatListProps {
   chats: ChatListItemProps[]
@@ -12,17 +13,20 @@ export default function ChatList({
   selectedChatId,
 }: ChatListProps) {
   return (
-    <section className="flex w-96 flex-col border-r bg-white">
-      <div className="flex items-center gap-2 p-4 pb-2">
+    <section className="flex h-full w-full flex-col bg-white md:w-96 md:border-r">
+      <div className="block px-4 pt-6 pb-2 text-center text-lg font-semibold md:hidden">
+        Chats
+      </div>
+      <div className="flex items-center gap-2 px-4 pt-2 pb-2 md:pt-4 md:pb-2">
         <input
           type="text"
           placeholder="Search..."
-          className="flex-1 border bg-gray-50 px-3 py-2 focus:ring focus:outline-none"
+          className="flex-1 rounded border bg-gray-50 px-3 py-2 focus:ring focus:outline-none"
         />
-        <button className="ml-2 bg-green-700 p-2 text-white hover:bg-green-800">
+        <button className="ml-2 hidden rounded-full bg-green-700 p-2 text-white hover:bg-green-800 md:inline-flex">
           <svg
-            width="20"
-            height="20"
+            width="24"
+            height="24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -32,7 +36,7 @@ export default function ChatList({
           </svg>
         </button>
       </div>
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pb-24 md:pb-0">
         {chats.map((chat, i) => (
           <div
             key={chat.id ?? i}
@@ -46,6 +50,19 @@ export default function ChatList({
           </div>
         ))}
       </div>
+      <MobileBottomNav />
+      <button className="fixed right-6 bottom-20 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-green-700 text-white shadow-lg md:hidden">
+        <svg
+          width="32"
+          height="32"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
     </section>
   )
 }

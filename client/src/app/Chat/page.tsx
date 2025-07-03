@@ -50,27 +50,45 @@ const chats = [
   // ...add more as needed
 ]
 
+import { useState } from 'react'
 import { useChatStore } from '@/components/chatStore'
 
 export default function ChatPage() {
   const selectedChatId = useChatStore((s) => s.selectedChatId)
   const setSelectedChatId = useChatStore((s) => s.setSelectedChatId)
+  // Local state to control mobile view (chat list vs chat area)
+  const [showChatAreaMobile, setShowChatAreaMobile] = useState(false)
 
   return (
     <div className="flex h-screen bg-[#FAFBFA]">
-      <Sidebar />
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
       <main className="flex w-full flex-1 flex-col">
-        <TopBar />
-        <div className="flex min-h-0 flex-1">
-          <ChatList
-            chats={chats.map((chat, idx) => ({
-              ...chat,
-              id: chat.id ?? idx + 1,
-            }))}
-            onSelectChat={(id) => setSelectedChatId(id?.toString?.() ?? null)}
-            selectedChatId={selectedChatId ? Number(selectedChatId) : null}
-          />
-          <MainChatArea />
+        <div className="hidden md:block">
+          <TopBar />
+        </div>
+        <div className="flex min-h-0 flex-1 flex-col md:flex-row">
+          <div
+            className={`h-[calc(100vh-56px)] min-h-0 w-full border-b bg-white md:h-auto md:w-96 md:flex-shrink-0 md:border-r md:border-b-0 ${showChatAreaMobile ? 'hidden' : 'block'} md:block`}
+          >
+            <ChatList
+              chats={chats.map((chat, idx) => ({
+                ...chat,
+                id: chat.id ?? idx + 1,
+              }))}
+              onSelectChat={(id) => {
+                setSelectedChatId(id?.toString?.() ?? null)
+                setShowChatAreaMobile(true)
+              }}
+              selectedChatId={selectedChatId ? Number(selectedChatId) : null}
+            />
+          </div>
+          <div
+            className={`h-[calc(100vh-56px)] min-h-0 flex-1 md:h-auto ${showChatAreaMobile ? 'block' : 'hidden'} md:block`}
+          >
+            <MainChatArea onBack={() => setShowChatAreaMobile(false)} />
+          </div>
         </div>
       </main>
     </div>
