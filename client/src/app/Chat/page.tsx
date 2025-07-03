@@ -50,16 +50,16 @@ const chats = [
   // ...add more as needed
 ]
 
-import { useState } from 'react'
+import { useChatStore } from '@/components/chatStore'
 
 export default function ChatPage() {
-  const [selectedChatId, setSelectedChatId] = useState<number | null>(null)
+  const selectedChatId = useChatStore((s) => s.selectedChatId)
+  const setSelectedChatId = useChatStore((s) => s.setSelectedChatId)
 
   return (
     <div className="flex h-screen bg-[#FAFBFA]">
       <Sidebar />
-
-      <main className="flex flex-1 flex-col">
+      <main className="flex w-full flex-1 flex-col">
         <TopBar />
         <div className="flex min-h-0 flex-1">
           <ChatList
@@ -67,13 +67,10 @@ export default function ChatPage() {
               ...chat,
               id: chat.id ?? idx + 1,
             }))}
-            onSelectChat={setSelectedChatId}
-            selectedChatId={selectedChatId}
+            onSelectChat={(id) => setSelectedChatId(id?.toString?.() ?? null)}
+            selectedChatId={selectedChatId ? Number(selectedChatId) : null}
           />
-          <MainChatArea
-            selectedChatId={selectedChatId}
-            onSelectChat={setSelectedChatId}
-          />
+          <MainChatArea />
         </div>
       </main>
     </div>
