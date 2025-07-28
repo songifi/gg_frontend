@@ -1,11 +1,10 @@
 'use client'
-import Navbar from '@/components/Navbar'
 import GossipScreen from './components/GossipScreen'
 import NFT from './components/NFT'
 import Image from 'next/image'
 import { Eye, EyeOff, ArrowLeft, Plus, Search } from 'lucide-react'
 import { useState } from 'react'
-const HomePage = () => {
+const page = () => {
   const [showBalance, setShowBalance] = useState(true)
   const people = [
     { name: 'Alexis', img: '/alexis.png' },
@@ -22,10 +21,9 @@ const HomePage = () => {
   } | null>(null)
 
   return (
-    <div>
-      <Navbar />
+    <>
       {seeAllNFT ? (
-        <div className="w-[992px] p-16">
+        <div className="w-full p-6 lg:p-16">
           <div
             className="flex cursor-pointer items-center gap-2"
             onClick={() => setSeeAllNFT(false)}
@@ -72,42 +70,40 @@ const HomePage = () => {
           </div>
         </div>
       ) : (
-        <div className="p-16">
-          <div className="border-b-[0.75px] border-[#dbe1e7] py-4">
+        <div className="w-full p-6 lg:p-16">
+          <div className="border-b-[0.75px] border-[#dbe1e7] py-2 lg:py-4">
             <h1 className="font-sans text-[#5a5b5c]">Welcome👋</h1>
-            <h1 className="font-sans text-[24px] font-semibold text-[#090909]">
+            <h1 className="font-sans text-lg font-semibold text-[#090909] lg:text-[24px]">
               User 1234
             </h1>
           </div>
-          <div className="flex gap-16 py-8">
-            <div className="h-[386px] w-[430px]">
-              <div className="rounded-[20px] bg-[#f9f9fa]">
-                <div className="p-4">
-                  <div className="rounded-[16px] border-[0.5px] border-[#dbe2e8] bg-white p-6 text-center">
-                    <div className="flex items-center justify-center gap-1 text-[#666666]">
-                      <div className="text-[12px]">Wallet Balance</div>
-                      <div
-                        onClick={() => setShowBalance(!showBalance)}
-                        className="cursor-pointer"
-                      >
-                        {showBalance ? <Eye size={16} /> : <EyeOff size={16} />}
+          <div className="grid grid-cols-1 gap-16 py-8 lg:grid-cols-[1fr_1.16fr]">
+            <div className="w-full lg:w-[430px]">
+              <div className="rounded-[20px] bg-[#f9f9fa] p-3">
+                <div className="rounded-[16px] border-[0.5px] border-[#dbe2e8] bg-white p-6 text-center">
+                  <div className="flex items-center justify-center gap-1 text-[#666666]">
+                    <div className="text-[12px]">Wallet Balance</div>
+                    <div
+                      onClick={() => setShowBalance(!showBalance)}
+                      className="cursor-pointer"
+                    >
+                      {showBalance ? <Eye size={16} /> : <EyeOff size={16} />}
+                    </div>
+                  </div>
+                  <div className="pt-2 font-sans text-[32px] font-semibold">
+                    {showBalance ? (
+                      <div>
+                        <span className="text-[#0B501E]">$6192.</span>
+                        <span className="text-[#0B501E80]">50</span>
                       </div>
-                    </div>
-                    <div className="pt-2 font-sans text-[32px] font-semibold">
-                      {showBalance ? (
-                        <div>
-                          <span className="text-[#0B501E]">$6192.</span>
-                          <span className="text-[#0B501E80]">50</span>
-                        </div>
-                      ) : (
-                        '******'
-                      )}
-                    </div>
-                    <div className="pt-8">
-                      <button className="h-[42px] w-full cursor-pointer rounded-[100px] bg-[#f9f9fa] font-sans text-[14px] font-medium text-[#0B501E]">
-                        Fund Wallet
-                      </button>
-                    </div>
+                    ) : (
+                      '******'
+                    )}
+                  </div>
+                  <div className="pt-8">
+                    <button className="h-[42px] w-full cursor-pointer rounded-[100px] bg-[#f9f9fa] font-sans text-[14px] font-medium text-[#0B501E]">
+                      Fund Wallet
+                    </button>
                   </div>
                 </div>
               </div>
@@ -115,11 +111,11 @@ const HomePage = () => {
                 <div className="py-4 font-sans font-medium text-[#4D4845]">
                   Frequent Gossips
                 </div>
-                <div className="flex gap-12">
+                <div className="flex gap-3 lg:gap-12">
                   {people.map((item) => (
                     <div key={item.name}>
                       <div
-                        className="flex cursor-pointer flex-col gap-3"
+                        className="flex cursor-pointer flex-col gap-3 text-sm"
                         onClick={() => {
                           setSelectedPerson(item)
                           setGossipScreen(true)
@@ -130,7 +126,7 @@ const HomePage = () => {
                           alt="img"
                           width={48}
                           height={48}
-                          className="rounded-full"
+                          className="h-8 w-8 rounded-full lg:h-12 lg:w-12"
                         />
                         {item.name}
                       </div>
@@ -149,7 +145,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="h-[648px] w-[498px]">
+            <div className="flex-1">
               <div className="flex justify-between pb-5">
                 <div>
                   <h1 className="font-sans text-[14px] font-medium text-[#4D4845]">
@@ -176,7 +172,7 @@ const HomePage = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
-export default HomePage
+export default page
