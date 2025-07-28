@@ -15,7 +15,7 @@ const NFT = ({ name, price, img }: Card) => {
           alt="img"
           width={241}
           height={210}
-          className="rounded-t-[12px] object-cover"
+          className="w-full rounded-t-[12px] object-cover"
         />
         <h1 className="absolute top-3 left-3 z-10 m-0 rounded-[1000px] border-[1px] border-[#C8F9D4] bg-[#EDFDF1] px-3 py-1.5 font-sans text-[12px] font-medium text-[#0B501E]">
           {price}
