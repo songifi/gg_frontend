@@ -22,6 +22,7 @@ const AccountModal = ({ onClose }: AccountModalProps) => {
       onClose()
     } catch (err) {
       console.log(err)
+      toast.error('Wallet disconnect failed')
     }
   }
 

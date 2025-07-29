@@ -25,6 +25,7 @@ const WalletModal = ({ onClose }: WalletModalProps) => {
       onClose()
     } catch (err) {
       console.log(err)
+      toast.error('Wallet connect failed')
     }
   }
 
