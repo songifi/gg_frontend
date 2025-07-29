@@ -39,10 +39,6 @@ export default function Sidebar() {
           })}
         </nav>
       </div>
-      <div className="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">
-        <LogOut />
-        <span>Log Out</span>
-      </div>
     </aside>
   )
 }

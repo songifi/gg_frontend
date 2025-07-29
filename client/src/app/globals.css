@@ -1,8 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -156,4 +153,13 @@
   }
 
   
+}
+
+
+body{
+  position: relative;
+}
+
+button{
+  cursor: pointer;
 }
